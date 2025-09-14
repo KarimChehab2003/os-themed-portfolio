@@ -1,0 +1,17 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+.os-wallpaper {
+  background: linear-gradient(
+    120deg,
+    #0f2027,
+    #0f2128,
+    #122733,
+    #233851,
+    #6b5084,
+    #c4618f,
+    #ea7084,
+    #f6787e,
+    #f7797d
+  );
+}
