@@ -35,7 +35,7 @@ function Taskbar() {
             </div>
 
             {/* Center */}
-            <div className="navbar-center">
+            <div className="navbar-center ">
                 <Clock />
             </div>
 

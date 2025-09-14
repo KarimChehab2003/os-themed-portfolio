@@ -17,7 +17,7 @@ function Clock() {
             const date = new Intl.DateTimeFormat("en-US", options).format(now);
             const hours = String(now.getHours()).padStart(2, "0");
             const minutes = String(now.getMinutes()).padStart(2, "0");
-            setTime(`${hours}:${minutes}  ${date}`)
+            setTime(`${date}  ${hours}:${minutes}`)
         }
         updateClock();
         const timer = setInterval(updateClock, 1000);
