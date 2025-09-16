@@ -1,26 +1,23 @@
 import BootScreen from "@/components/BootScreen";
 import BottomDock from "@/components/BottomDock";
-import FileIcon from "@/components/FileIcon";
-import Taskbar from "@/components/Taskbar";
-import { desktopIcons } from "@/lib/constants";
+import ActivityBar from "@/components/ActivityBar";
+import DesktopGridIcons from "@/components/DesktopIconsGrid";
+import Window from "@/components/Window";
+import TechStack from "./tech-stack/page";
 
 export default function Home() {
   return (
-    <main className="flex flex-col justify-between min-h-screen relative os-wallpaper">
+    <main className="flex flex-col justify-between min-h-screen h-full relative os-wallpaper overflow-hidden">
       <BootScreen />
 
-      <Taskbar />
+      <ActivityBar />
 
-      <div className="grow p-4">
-        <ul className="grid grid-cols-2 sm:grid-cols-1 gap-6 place-items-center sm:place-items-start">
-          {
-            desktopIcons.map((fileIcon) => (
-              <li key={fileIcon.name}>
-                <FileIcon {...fileIcon} />
-              </li>
-            ))
-          }
-        </ul>
+      <div className="flex-1 relative">
+        <DesktopGridIcons />
+        <Window title="Tech Stack">
+          <TechStack />
+        </Window>
+
       </div>
 
       <BottomDock />

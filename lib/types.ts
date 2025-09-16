@@ -2,7 +2,8 @@ import { IconType } from "react-icons";
 
 export type DesktopIcon = {
     name: string;
-    icon: IconType
+    icon: IconType;
+    color?: string;
 }
 
 export type DockLink = {

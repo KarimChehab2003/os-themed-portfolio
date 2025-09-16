@@ -1,14 +1,11 @@
-"use client";
-
-import { FaBars, FaBatteryFull, FaVolumeHigh, FaVolumeXmark, FaWifi } from "react-icons/fa6";
+import { FaBars } from "react-icons/fa6";
 import Clock from "./Clock";
-import { selectEnabled, selectToggleSound, useSoundStore } from "@/store/soundStore";
+import SystemTray from "./SystemTray";
 
 function Taskbar() {
-    const soundEnabled = useSoundStore(selectEnabled);
-    const toggleSound = useSoundStore(selectToggleSound);
+
     return (
-        <header className="navbar bg-[#1c1c1c] text-gray-2 min-h-10 py-2 px-4 text-sm ">
+        <header className="navbar bg-[#1c1c1c] text-gray-2 min-h-10 py-2 px-4 text-sm">
             {/* Start */}
             <div className="navbar-start gap-2">
                 {/* Hamburger (small screens only) */}
@@ -40,11 +37,7 @@ function Taskbar() {
             </div>
 
             {/* End */}
-            <div className="navbar-end flex justify-end items-center gap-2">
-                <FaWifi className="text-lg" />
-                {soundEnabled ? (<FaVolumeHigh className="text-lg cursor-pointer" onClick={toggleSound} />) : (<FaVolumeXmark className="text-lg cursor-pointer" onClick={toggleSound} />)}
-                <FaBatteryFull className="text-lg" />
-            </div>
+            <SystemTray />
         </header>
     );
 }
