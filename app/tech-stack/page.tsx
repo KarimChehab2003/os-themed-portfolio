@@ -3,7 +3,7 @@ import { techStack } from "@/lib/constants";
 
 function TechStack() {
     return (
-        <ul className="flex flex-wrap items-center gap-4 overflow-auto">
+        <ul className="flex flex-wrap items-center gap-4 ">
             {
                 techStack.map(({ name, icon: Icon, color }) => (
                     <li key={name}>

@@ -15,3 +15,8 @@
     #f7797d
   );
 }
+
+.resize-grip {
+  background: linear-gradient(135deg, transparent 50%, #888 50%) 0 0 / 6px 6px
+    repeat;
+}
