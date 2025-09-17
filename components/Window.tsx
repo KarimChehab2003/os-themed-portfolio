@@ -13,6 +13,8 @@ function Window({ children, title }: { children: React.ReactNode, title: string 
     const closeWindow = useWindowStore(selectCloseWindow);
     const isOpen = windows.includes(title);
 
+    console.log(window.innerWidth)
+
     useEffect(() => {
         setIsMounted(true);
         setIsMobile(window.innerWidth < 768)
