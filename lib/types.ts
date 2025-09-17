@@ -12,3 +12,8 @@ export type DockLink = {
     tooltip: string;
     icon: IconType;
 }
+
+export type Window = {
+    title: string;
+    content: React.ReactNode
+}

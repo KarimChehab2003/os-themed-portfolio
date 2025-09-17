@@ -8,7 +8,7 @@ function SystemTray() {
     const soundEnabled = useSoundStore(selectEnabled);
     const toggleSound = useSoundStore(selectToggleSound);
     return (
-        <div className="navbar-end flex justify-end items-center gap-2">
+        <div className="flex justify-end items-center gap-2">
             <FaWifi className="text-lg" />
             {soundEnabled ? (<FaVolumeHigh className="text-lg cursor-pointer hover:text-rose-500 transition-colors duration-200" onClick={toggleSound} />) : (<FaVolumeXmark className="text-lg cursor-pointer hover:text-rose-500 transition-colors duration-200" onClick={toggleSound} />)}
             <FaBatteryFull className="text-lg" />
