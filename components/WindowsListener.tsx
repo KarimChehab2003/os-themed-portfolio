@@ -3,10 +3,10 @@ import { selectWindows, useWindowStore } from "@/store/windowStore";
 import Resume from "@/app/resume/page";
 import TechStack from "@/app/tech-stack/page";
 import Window from "./Window";
+import Notes from "@/app/notes/page";
 
 function WindowsListener() {
     const windows = useWindowStore(selectWindows);
-    console.log(windows)
 
     return (
         <>
@@ -22,6 +22,12 @@ function WindowsListener() {
                         return (
                             <Window key={title} title={title}>
                                 <Resume />
+                            </Window>
+                        )
+                    case "Notes":
+                        return (
+                            <Window key={title} title={title}>
+                                <Notes />
                             </Window>
                         )
                 }

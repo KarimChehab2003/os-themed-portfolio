@@ -7,7 +7,6 @@ import { IconType } from "react-icons";
 import { IoLogoFirebase } from "react-icons/io5";
 import zustandLogo from "@/public/zustand.svg";
 import daisyUILogo from "@/public/daisyUI.svg";
-import { BiLogoPostgresql } from "react-icons/bi";
 
 export const desktopIcons: DesktopIcon[] = [
     {

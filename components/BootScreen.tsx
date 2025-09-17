@@ -21,7 +21,7 @@ function BootScreen() {
                 <motion.p
                     initial={{ filter: "blur(10px)", opacity: 0 }}
                     animate={{ filter: "none", opacity: 1 }}
-                    className="text-4xl sm:text-5xl font-light">Hello World</motion.p>
+                    className="text-4xl sm:text-5xl font-mono">{`<Hello World/>`}</motion.p>
             </motion.main> : null}
         </AnimatePresence>
     );

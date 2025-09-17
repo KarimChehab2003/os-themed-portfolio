@@ -8,7 +8,7 @@ type WindowStore = {
 }
 
 export const useWindowStore = create<WindowStore>((set) => ({
-    windows: [],
+    windows: ["Notes"],
 
     openWindow: (window) => {
         if (useWindowStore.getState().windows.includes(window)) return;

@@ -1,27 +1,32 @@
 "use client";
 
 import { selectCloseWindow, selectWindows, useWindowStore } from "@/store/windowStore";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Rnd } from "react-rnd";
 import { motion } from "framer-motion";
 
 function Window({ children, title }: { children: React.ReactNode, title: string }) {
     const [isMaximized, setIsMaximized] = useState<boolean>(false);
+    const [isMounted, setIsMounted] = useState<boolean>(false);
+    const [isMobile, setIsMobile] = useState<boolean>(false);
     const windows = useWindowStore(selectWindows);
     const closeWindow = useWindowStore(selectCloseWindow);
     const isOpen = windows.includes(title);
 
-    if (!isOpen) return null;
+    useEffect(() => {
+        setIsMounted(true);
+        setIsMobile(window.innerWidth < 768)
+    }, [])
 
-    console.log("Maximized:", isMaximized)
+    if (!isOpen || !isMounted) return null;
 
     return (
         <Rnd
             default={{
-                x: 100,
-                y: 100,
-                width: 320,
-                height: 250,
+                x: isMobile ? 0 : 100,
+                y: isMobile ? 50 : 100,
+                width: isMobile ? 320 : 500,
+                height: isMobile ? 250 : 350,
             }}
             bounds="window"
             minWidth={320}
