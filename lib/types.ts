@@ -13,7 +13,19 @@ export type DockLink = {
     icon: IconType;
 }
 
+
 export type Window = {
     title: string;
-    content: React.ReactNode
+    data?: ProjectData;
+}
+
+export type ProjectData = {
+    name: string;
+    shortDesc: string;
+    longDesc: string;
+    stack: string[];
+    lastModified: string;
+    live?: string;
+    code?: string;
+    img?: string;
 }

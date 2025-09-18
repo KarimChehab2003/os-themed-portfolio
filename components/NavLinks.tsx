@@ -1,6 +1,6 @@
 "use client";
 
-import { selectOpenWindow, selectWindows, useWindowStore } from "@/store/windowStore";
+import { selectOpenWindow, useWindowStore } from "@/store/windowStore";
 import { FaBars } from "react-icons/fa6";
 
 function NavLinks() {

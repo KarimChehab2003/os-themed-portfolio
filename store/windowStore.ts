@@ -1,21 +1,24 @@
+import { ProjectData, Window } from "@/lib/types";
 import { create } from "zustand";
 
-type WindowStore = {
-    windows: string[];
 
-    openWindow: (window: string) => void;
-    closeWindow: (window: string) => void;
+
+type WindowStore = {
+    windows: Window[];
+
+    openWindow: (title: string, data?: ProjectData) => void;
+    closeWindow: (title: string) => void;
 }
 
 export const useWindowStore = create<WindowStore>((set) => ({
-    windows: ["Notes"],
+    windows: [{ title: "Notes" }],
 
-    openWindow: (window) => {
-        if (useWindowStore.getState().windows.includes(window)) return;
-        set((state) => ({ windows: [...state.windows, window] }));
+    openWindow: (title, data) => {
+        if (useWindowStore.getState().windows.find((win) => win.title === title)) return;
+        set((state) => ({ windows: [...state.windows, { title, data }] }));
     },
-    closeWindow: (window) => {
-        set((state) => ({ windows: state.windows.filter((currentWindow) => currentWindow !== window) }))
+    closeWindow: (title) => {
+        set((state) => ({ windows: state.windows.filter((currentWindow) => currentWindow.title !== title) }))
     }
 }))
 
