@@ -45,7 +45,7 @@ function Window({ children, title }: { children: React.ReactNode, title: string 
                 className="shadow-xl bg-[#242424] rounded-lg flex flex-col h-full"
             >
                 {/* Header */}
-                <div className="flex justify-between items-center rounded-t-lg bg-[#1c1c1c] px-3 py-1 cursor-move z-30">
+                <div className="flex justify-between items-center rounded-t-lg bg-[#1c1c1c] px-3 py-2 cursor-move z-30">
                     <div className="window-header flex-1">
                         <p className="text-center text-white">{title}</p>
                     </div>

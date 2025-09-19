@@ -1,3 +1,4 @@
+import { StaticImageData } from "next/image";
 import { IconType } from "react-icons";
 
 export type DesktopIcon = {
@@ -27,5 +28,5 @@ export type ProjectData = {
     lastModified: string;
     live?: string;
     code?: string;
-    img?: string;
+    img?: StaticImageData;
 }
