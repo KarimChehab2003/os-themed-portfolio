@@ -6,7 +6,7 @@ import WindowsListener from "@/components/WindowsListener";
 
 export default function Home() {
   return (
-    <div className="flex flex-col justify-between min-h-screen h-full relative os-wallpaper overflow-hidden">
+    <div className="flex flex-col justify-between min-h-screen min-h[100dvh] h-full relative os-wallpaper overflow-hidden">
       <BootScreen />
 
       <ActivityBar />
