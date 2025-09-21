@@ -8,33 +8,38 @@ import AboutMe from "@/app/about-me/page";
 import ProjectCard from "./ProjectCard";
 import Projects from "@/app/projects/page";
 
+const components: Record<string, React.FC> = {
+    "About Me": AboutMe,
+    "Notes": Notes,
+    "Tech Stack": TechStack,
+    "Resume": Resume,
+    "Projects": Projects
+}
+
 function WindowsListener() {
     const windows = useWindowStore(selectWindows);
     console.log(windows);
     return (
         <>
-            {windows.map((win, i) => (
-                <Window key={i} title={win.title}>
-                    {win.data ? (
-                        <ProjectCard {...win.data} />
-                    ) : win.title === "About Me" ? (
-                        <AboutMe />
-                    ) : win.title === "Notes" ? (
-                        <Notes />
-                    ) : win.title === "Tech Stack" ? (
-                        <TechStack />
-                    ) : win.title === "Resume" ? (
-                        <Resume />
-                    ) : win.title === "Projects" ? (
-                        <Projects />
-                    ) : (
-                        <p>Empty file: {win.title}</p>
-                    )}
-                </Window>
-            ))}
+            {windows.map((win, i) => {
+                if (win.data) {
+                    return (
+                        <Window key={i} title={win.title}>
+                            <ProjectCard {...win.data} />
+                        </Window>
+                    )
+                }
 
+                const Component = components[win.title];
+                return Component && (
+                    <Window key={i} title={win.title}>
+                        <Component />
+                    </Window>
+                )
+            })}
         </>
     )
+
 }
 
 export default WindowsListener;
