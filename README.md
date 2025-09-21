@@ -25,4 +25,3 @@ The goal is to showcase my projects, skills, and experience in a fun and interac
 - **About Me** – Short bio and background
 - **Resume** – Opens as a document-style window
 - **Tech Stack** – A folder with icons/names of my skills
-- **Work Experience** – Highlights of my career so far
