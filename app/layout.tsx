@@ -30,7 +30,6 @@ export const metadata: Metadata = {
     locale: "en_US",
     type: "website",
   },
-  themeColor: "#0f172a",
 };
 
 export default function RootLayout({

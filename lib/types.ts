@@ -21,11 +21,12 @@ export type Window = {
 }
 
 export type ProjectData = {
+    id: string;
     name: string;
-    shortDesc: string;
-    longDesc: string;
+    short_desc: string;
+    long_desc: string;
     stack: string[];
-    lastModified: string;
+    last_modified: string;
     live?: string;
     code?: string;
     img?: StaticImageData;

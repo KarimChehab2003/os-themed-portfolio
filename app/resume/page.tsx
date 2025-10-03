@@ -5,7 +5,7 @@ function Resume() {
                 {/* Header */}
                 <section className="text-center">
                     <h2 className="text-3xl font-bold">Karim Chehab</h2>
-                    <p>Frontend Developer</p>
+                    <p>Frontend Engineer</p>
                     <p>Masr Al Gadida, Cairo, Egypt | +20 1008408815 | <span className="text-info">karimchehab2018@gmail.com</span></p>
                     <ul className="inline-flex items-center space-x-2">
                         <li>
@@ -24,7 +24,7 @@ function Resume() {
                 <section>
                     <h3 className="font-bold uppercase text-center">Professional Summary</h3>
                     <div className="divider my-0"></div>
-                    <p>Junior frontend developer with 1+ year of hands-on experience in React and Typescript, eager to contribute to performant and maintainable web applications and to further develop expertise in Next.js and modern frontend frameworks.
+                    <p>Junior frontend engineer with 1+ year of hands-on experience in React and Typescript, eager to contribute to performant and maintainable web applications and to further develop expertise in Next.js and modern frontend frameworks.
                     </p>
                 </section>
 
@@ -47,12 +47,11 @@ function Resume() {
                     <h3 className="font-bold uppercase text-center">Work Experience</h3>
                     <div className="divider my-0"></div>
                     <div className="flex justify-between items-center font-bold">
-                        <p>Web Developer Intern | UneeqInterns</p>
-                        <p>1st May 2025 - 25th May 2025</p>
+                        <p>Frontend Engineer | Codera (Startup) </p>
+                        <p>August 2025 - August 2025</p>
                     </div>
                     <ul className="list-disc list-inside mx-2">
-                        <li>Built assigned web apps (e-commerce, auth, payment gateway) using React, Node.js, and Firebase.</li>
-                        <li>Gained hands-on experience with Git workflows and delivering projects under tight deadlines.</li>
+                        <li>Designed and implemented Codera’s custom frontend website with a responsive, maintainable codebase, delivering features quickly in a fast-paced startup environment.</li>
                     </ul>
                 </section>
 
@@ -63,8 +62,8 @@ function Resume() {
                     <ul className="list-disc list-inside mx-2">
                         <li><span className="font-bold">Frontend:</span> React, Next.js, TypeScript, Javascript, HTML5, CSS3, TailwindCSS, Zustand, React Query</li>
                         <li><span className="font-bold">Tooling:</span> Git, GitHub, Firebase, Supabase, RESTful APIs</li>
-                        <li><span className="font-bold">Additional Knowledge:</span> Node.js, Express.js, </li>
-                        <li><span className="font-bold">Soft Skills:</span> Problem-solving, team collaboration, adaptability, time management</li>
+                        <li><span className="font-bold">Additional Knowledge:</span> Node.js, Express.js, Git/version control workflow, Selenium automation, OOP</li>
+                        <li><span className="font-bold">Soft Skills:</span> Remote collaboration, problem-solving, clear documentation, adaptability, time management</li>
                         <li><span className="font-bold">Spoken Languages:</span> Arabic (Native), English (Professional Proficiency C1), French (Intermediate)</li>
                     </ul>
                 </section>
@@ -112,7 +111,7 @@ function Resume() {
                             </div>
                             <ul className="list-disc list-inside mx-2">
                                 <li>Developed a web app to track income/expenses with real-time updates and data persistence.</li>
-                                <li>Designed a mobile-friendly interface supporting income categorization and expense insights.</li>
+                                <li>Connected to Firebase for real-time API-driven updates, handling JSON data efficiently.</li>
                                 <li>
                                     <div className="inline-flex gap-2">
                                         <a href="https://github.com/KarimChehab2003/personal-finance-manager" target="_blank" className="link text-info">GitHub Repository</a>

@@ -1,15 +1,13 @@
 import Image from "next/image";
 
 import { FaFolder, FaJs, FaNodeJs, FaReact, FaRegFileAlt } from "react-icons/fa";
-import { DesktopIcon, DockLink, ProjectData } from "./types";
+import { DesktopIcon, DockLink } from "./types";
 import { SiFramer, SiGithub, SiGmail, SiInstagram, SiLinkedin, SiNextdotjs, SiPostgresql, SiReactquery, SiSupabase, SiTailwindcss, SiTypescript, SiVite, SiZod } from "react-icons/si";
 import { IconType } from "react-icons";
 import { IoLogoFirebase } from "react-icons/io5";
 import zustandLogo from "@/public/zustand.svg";
 import daisyUILogo from "@/public/daisyUI.svg";
-import normalityPreview from "@/public/projects/the-normality.png";
-import storePreview from "@/public/projects/e-commerce-nextjs.png";
-import financePreview from "@/public/projects/personal-finance-manager.png";
+
 
 export const desktopIcons: DesktopIcon[] = [
     {
@@ -101,37 +99,3 @@ export const techStack: DesktopIcon[] = [
     { name: "Vite", icon: SiVite, color: "#646CFF" },
 ];
 
-export const projects: ProjectData[] = [{
-    name: "The Normality ",
-    shortDesc: "An anomaly spotting game",
-    longDesc:
-        "A QA inspector game where you review a website left unfinished by a deceased developer. Spot anomalies, follow protocols, and win by careful observation.",
-    stack: ["Next.js", "React", "TypeScript", "TailwindCSS", "Zustand"],
-    lastModified: "06/09/2025",
-    live: "https://the-normality.vercel.app/",
-    code: "https://github.com/KarimChehab2003/the-normality",
-    img: normalityPreview,
-},
-{
-    name: "E-Commerce Store",
-    shortDesc: "Store with cart & filters",
-    longDesc:
-        "A responsive e-commerce web app featuring product browsing, category filtering, and a dynamic shopping cart.",
-    stack: ["Next.js", "React", "TypeScript", "TailwindCSS", "Zustand"],
-    lastModified: "31/08/2025",
-    live: "https://e-commerce-nextjs-karim-chehab.vercel.app/",
-    code: "https://github.com/KarimChehab2003/e-commerce-nextjs",
-    img: storePreview,
-},
-{
-    name: "Personal Finance Manager",
-    shortDesc: "Track income & expenses",
-    longDesc:
-        "A simple web application to manage personal income and expenses. Supports login via Google OAuth.",
-    stack: ["React", "TypeScript", "TailwindCSS", "React Query", "Zustand", "Firebase"],
-    lastModified: "11/09/2025",
-    live: "https://karimchehab2003.github.io/personal-finance-manager/",
-    code: "https://github.com/KarimChehab2003/personal-finance-manager",
-    img: financePreview,
-},
-];

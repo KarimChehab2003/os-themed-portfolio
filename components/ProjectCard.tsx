@@ -1,14 +1,14 @@
 import { ProjectData } from "@/lib/types";
 import Image from "next/image";
 
-function ProjectCard({ name, longDesc, stack, lastModified, live, code, img }: ProjectData) {
+function ProjectCard({ name, long_desc, stack, last_modified, live, code, img }: ProjectData) {
     return (
         <div className="p-4 text-sm space-y-4 max-w-xl mx-auto">
             {/* Title & Last Modified */}
             <div className="flex justify-between items-center">
                 <h2 className="text-lg font-semibold text-white">{name}</h2>
                 <span className="text-xs text-gray-400">
-                    Last modified: {lastModified}
+                    Last modified: {last_modified}
                 </span>
             </div>
 
@@ -25,7 +25,7 @@ function ProjectCard({ name, longDesc, stack, lastModified, live, code, img }: P
             )}
 
             {/* Description */}
-            <p className="text-gray-200">{longDesc}</p>
+            <p className="text-gray-200">{long_desc}</p>
 
             {/* Stack */}
             <div>
